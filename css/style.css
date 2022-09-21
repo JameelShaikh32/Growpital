@@ -1,0 +1,637 @@
+    @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --background: #17161b;
+        --green: #02d16d;
+        --yellow: #ffbf32;
+        --red: #df3a48;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px 15px 25px;
+        background-color: var(--background);
+    }
+    
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    nav .logo h1 {
+        font-size: 36px;
+        font-weight: 600;
+        background: linear-gradient(91.26deg, #72F6D1 0%, #07E57D 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    
+    nav a {
+        margin-left: 100px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: #fff;
+    }
+    
+    .nav-icon {
+        margin: 0 10px 0 10px;
+        height: 29px;
+        width: 29px;
+        border-radius: 0px;
+        cursor: pointer;
+    }
+    
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: var(--background);
+        display: flex;
+    }
+    
+    .menu {
+        position: relative;
+        top: 20px;
+        width: 208px;
+        height: 531px;
+        display: block;
+        background: #20222B;
+        border-radius: 0 8px 8px 0;
+    }
+    
+    .menu #menu-btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 12px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+    }
+    
+    .menu #menu-btn #menu-icon {
+        margin: 0 10px 0 15px;
+        width: 38px;
+        height: 38px;
+    }
+    
+    .menu .tabs a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        padding: 22px 18px;
+    }
+    
+    .menu hr {
+        border: 1px solid var(--yellow);
+    }
+    
+    .menu .tabs .tab-icons {
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 5px;
+        font-size: 1.5em;
+    }
+    
+    .menu .tabs .active {
+        color: var(--yellow);
+        font-weight: 500;
+    }
+    
+    .wallet {
+        position: relative;
+        left: 90px;
+        width: 35%;
+        height: auto;
+    }
+    
+    .wallet #card {
+        position: relative;
+        top: 20px;
+        width: 357px;
+        height: 209px;
+        background: var(--green);
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    
+    .wallet #card #balance-card {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+    }
+    
+    .wallet #card #balance-card::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -23%;
+        width: 223px;
+        height: 223px;
+        border: 25px solid var(--yellow);
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+    
+    .wallet #card #balance-card::after {
+        content: '';
+        position: absolute;
+        top: -70%;
+        right: -28%;
+        width: 223px;
+        height: 223px;
+        opacity: 0.5;
+        border: 25px solid var(--yellow);
+        border-radius: 50%;
+    }
+    
+    .wallet #card #balance-card #balance p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+    }
+    
+    .wallet #card #balance-card #balance #balance {
+        font-size: 33px;
+        font-weight: 600;
+    }
+    
+    .wallet-icons {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        bottom: 75.59%;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .wallet #card #balance-btns {
+        position: absolute;
+        top: 65%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .wallet #card #balance-btns #add-money-btn {
+        width: 200px;
+        height: 48px;
+        padding: 0 30px 0 30px;
+        background: var(--yellow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    .wallet #card #balance-btns #withdraw-btn {
+        width: 200px;
+        height: 48px;
+        background: var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-weight: 600;
+        color: rgb(190, 190, 190);
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    .wallet #card #balance-btns div {
+        margin: 8px;
+    }
+    
+    #history {
+        position: relative;
+        top: 29px;
+        height: auto;
+        color: #fff;
+    }
+    
+    #history .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #history .title h3 {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    
+    #history .title p {
+        font-size: 0.7em;
+        font-weight: 700;
+        color: var(--yellow);
+        cursor: pointer;
+    }
+    
+    #history .transactions .transaction {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #history .transactions .transaction .payee {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #history .transactions .transaction .payee .icon img {
+        width: 22px;
+        height: 22px;
+        margin: 5px;
+    }
+    
+    #history .transactions .transaction h5 {
+        font-size: 0.9em;
+        letter-spacing: 1px;
+    }
+    
+    #history .transactions .transaction p {
+        font-size: 11px;
+        color: rgb(190, 190, 190);
+    }
+    
+    #history .transactions .transaction .amount {
+        font-size: 0.9em;
+    }
+    
+    .credit {
+        color: #32F033;
+    }
+    
+    .failed {
+        color: #EA3943;
+    }
+    
+    .failed::before {
+        content: url('../icons/error.png');
+        position: relative;
+        top: 20px;
+        left: 50px;
+    }
+    
+    .add-money-panel {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        height: 421px;
+        width: 410px;
+        padding: 25px;
+        background: var(--background);
+        border: 3px solid #3a3b3f;
+        border-right: none;
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .add-money-panel h3 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        margin: 10px 0 10px 0;
+    }
+    
+    .add-money-panel .form {
+        position: relative;
+        top: -25px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .add-money-panel .money-input {
+        position: relative;
+        top: 25px;
+        width: 340px;
+        height: 64px;
+        background: var(--background);
+        border: 2px solid #2A2D3C;
+        border-radius: 8px;
+        outline: none;
+        padding: 15px 50px 10px 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    .add-money-panel .money-label {
+        position: absolute;
+        top: 40px;
+        left: 12px;
+        margin: 5px 0 10px 5px;
+        font-size: 16px;
+        color: rgb(170, 170, 170);
+        cursor: text;
+        transition: top 0.3s ease-in-out;
+    }
+    
+    .add-money-panel .money-input:focus~.money-label,
+    .money-input:not(:placeholder-shown).money-input:not(:focus)~.money-label {
+        top: 26px;
+        left: 8px;
+        font-size: 12px;
+    }
+    
+    #popular {
+        position: relative;
+        top: 15px;
+        width: 100%;
+    }
+    
+    #popular h5 {
+        position: absolute;
+        left: 50%;
+        font-size: 15px;
+        background: linear-gradient(91.26deg, #72F6D1 0%, #07E57D 21.87%, #A0ED8D 55.73%, #FED365 81.77%, #FAA49E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    
+    #popular #money {
+        position: relative;
+        top: 20px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    #popular #money span {
+        width: 76px;
+        height: 29px;
+        font-size: 11px;
+        font-style: normal;
+        color: var(--yellow);
+        background: #2A2D3C;
+        margin-right: 10px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #bank {
+        margin-top: 50px;
+        width: 343px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #ffbe323a;
+        padding: 10px 15px 10px 0;
+        border-radius: 5px;
+    }
+    
+    .bank-icon {
+        width: 32px;
+        height: 32px;
+        margin: 0 10px 0 10px;
+    }
+    
+    #bank span p {
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    #bank span p:nth-child(2) {
+        font-size: 15px;
+        color: #ABAFC4;
+    }
+    
+    #bank #know-more {
+        position: relative;
+        right: -25px;
+        margin-top: 20px;
+        font-size: 15px;
+        color: var(--yellow);
+        cursor: pointer;
+    }
+    
+    #continue-btn {
+        width: 90%;
+        height: 48px;
+        background: #07E67D;
+        margin: 20px 0 0 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        box-shadow: 0px 0px 30px rgba(14, 173, 98, 0.3);
+        cursor: pointer;
+    }
+    
+    .payment-box {
+        position: absolute;
+        top: 83px;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    
+    .payment-box.active {
+        position: absolute;
+        top: 83px;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+        overflow: hidden;
+        visibility: visible;
+    }
+    
+    .payment-success {
+        position: absolute;
+        width: 450px;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 800px;
+        padding: 15px;
+        background: #2A2D3C;
+        border: 3.5px solid #2A2D3C;
+        box-shadow: 0px 0px 10.6941px rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        z-index: 10;
+        transition: top 0.3s ease-in;
+    }
+    
+    .payment-success.active {
+        position: absolute;
+        width: 450px;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 30px;
+        padding: 15px;
+        background: #2A2D3C;
+        border: 3.5px solid #2A2D3C;
+        box-shadow: 0px 0px 10.6941px rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        z-index: 10;
+        transition: top 0.3s ease-in;
+    }
+    
+    #upper-info p:nth-child(1) {
+        font-size: 0.8em;
+        font-weight: 500;
+        color: #CCCDCC;
+    }
+    
+    #upper-info #transaction-amount {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #fff;
+    }
+    
+    #upper-info #transaction-date {
+        font-size: 0.8em;
+        font-weight: 500;
+        color: #CCCDCC;
+    }
+    
+    #upper-info img {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        cursor: pointer;
+    }
+    
+    #close-btn #close-icon {
+        font-size: 1.3em;
+        color: #fff;
+    }
+    
+    #alert-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px;
+        margin: 10px 0;
+        gap: 8px;
+        background: rgba(118, 226, 104, 0.25);
+        backdrop-filter: blur(12px);
+        border-radius: 8px;
+    }
+    
+    #alert-card .check-icon {
+        font-size: 38px;
+        color: #07E57D;
+    }
+    
+    #alert-card span {
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    #alert-card span h3 {
+        font-size: 1em;
+    }
+    
+    #alert-card span p {
+        font-size: 0.8em;
+    }
+    
+    .payment-details {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        border: 0.5px solid #ABAFC4;
+        padding: 15px;
+    }
+    
+    #sender,
+    #receiver {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    
+    .payment-details {
+        color: #fff;
+    }
+    
+    #from-label,
+    #to-label {
+        font-size: 0.9em;
+        color: var(--yellow);
+    }
+    
+    #sender-name,
+    #receiver-name {
+        font-size: 1.1em;
+    }
+    
+    #sender-bank-details em,
+    #receiver-bank-details em {
+        font-size: 0.9em;
+        display: block;
+    }
+    
+    #transaction-time {
+        font-size: 0.8em;
+        color: #CCCDCC;
+    }
+    
+    #help-share-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    #help-share-btn a {
+        padding: 12px 40px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    
+    #help-share-btn #help {
+        background: var(--yellow);
+        color: #000;
+    }
+    
+    #help-share-btn #share {
+        background: #242632;
+        color: #ABAFC4;
+    }
