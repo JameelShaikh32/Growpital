@@ -80,14 +80,14 @@ function loadData() {
 
     senderAccountNo.innerHTML = data.senderDetails.accountno;
 
-    receiverName.innerHTML =
-        receiverBank.innerHTML =
-        receiverAccountNo.innerHTML =
+//     receiverName.innerHTML =
+//         receiverBank.innerHTML =
+//         receiverAccountNo.innerHTML =
 
-        shotName.innerHTML =
+//         shotName.innerHTML =
 
-        paymentMethod.innerHTML =
-        transactionID.innerHTML =
+//         paymentMethod.innerHTML =
+//         transactionID.innerHTML =
 }
 
 function continueBtn() {
